@@ -1,14 +1,14 @@
-// const bcrypt = require('bcrypt')
-// const saltRounds = 10;
+const bcryptjs = require('bcryptjs')
+const saltRounds = 10;
 
-// myPlaintextPassword = "narasimha";
+myPlaintextPassword = "narasimha";
 
-// let a;
-
-
+let a;
 
 
-// const hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
 
-// bcrypt.compareSync(myPlaintextPassword, hash);
-// console.log(bcrypt.compareSync(myPlaintextPassword, hash))
+
+const hash = bcryptjs.hashSync(myPlaintextPassword, saltRounds);
+
+bcryptjs.compareSync(myPlaintextPassword, hash);
+console.log(bcryptjs.compareSync(myPlaintextPassword, hash))

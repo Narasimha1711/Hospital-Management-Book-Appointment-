@@ -8,7 +8,7 @@ const doc = require('./schema.js');  // patient details
 const appointDb = require('./appoinSchma.js'); //appointment details
 const doctorDb = require('./doctorSchema.js'); //doctor details
 const listPatients = require('./doctorlist_of_patient.js');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const mongoose = require('mongoose')
 const nodemailer = require('nodemailer');
@@ -71,7 +71,7 @@ app.post('/login', async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
-    // const hash = bcryptjs.hashSync(password, saltRounds);
+    // const hash = bcrypt.hashSync(password, saltRounds);
 
     // console.log(email, password)
 
@@ -81,7 +81,7 @@ app.post('/login', async (req, res) => {
 
     function check(hash, password) {
 
-        if(bcryptjs.compareSync(password, hash)) {
+        if(bcrypt.compareSync(password, hash)) {
             return true;
         }
 
@@ -143,14 +143,14 @@ app.post('/signup', async (req, res) => {
 
     const username = req.body.username;
     const password = req.body.password;
-    const hash = bcryptjs.hashSync(password, saltRounds);
+    const hash = bcrypt.hashSync(password, saltRounds);
     const email = req.body.email;
 
     const user = await doc.findOne({email: email})
     
 
-    // const hash = bcryptjs.hashSync(myPlaintextPassword, saltRounds);
-    // bcryptjs.compareSync(myPlaintextPassword, hash);
+    // const hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
+    // bcrypt.compareSync(myPlaintextPassword, hash);
 
 
     if(user) {
@@ -973,7 +973,7 @@ app.post('/patSignup', async (req,res) => {
     let {name, password, email, isadmin} = req.body;
     console.log(req.body)
 
-    const hash = bcryptjs.hashSync(password, saltRounds);
+    const hash = bcrypt.hashSync(password, saltRounds);
 
     // if(isadmin === "on") {
     //     isadmin = true;
@@ -1035,7 +1035,7 @@ app.post('/signup_superuser', async(req, res) => {
     let {name, password, email, isadmin} = req.body;
     console.log(req.body)
 
-    const hash = bcryptjs.hashSync(password, saltRounds);
+    const hash = bcrypt.hashSync(password, saltRounds);
     
 
     if(isadmin === "on") {
