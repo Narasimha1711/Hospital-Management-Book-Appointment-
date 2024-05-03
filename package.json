@@ -16,6 +16,7 @@
     "express": "^4.18.3",
     "express-session": "^1.18.0",
     "http": "^0.0.1-security",
+    "mongoose": "^8.3.3",
     "nodemailer": "^6.9.13",
     "peer": "^1.0.2",
     "socket.io": "^4.7.5",
