@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="/new02.css">
+
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+  /* font-family: 'Roboto', sans-serif; */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+nav{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(227, 94, 94);
+  background-color: white;
+  /* opacity: ; */
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0px 40px;
+  border-bottom: 1px solid black;
+  box-shadow: 4px 4px 4px black;
+  z-index: 10;
+  
+  /* display: block; */
+
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+  font-weight: 700;
+  /* border: 1px solid black; */
+  width: 100px;
+}
+
+.logo img {
+  width: 75px;
+  border-radius: 50%;
+  /* transform: scale(1,1); */
+  /* overflow: hidden; */
+}
+
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links ul{
+  display: flex;
+  color:white;
+  /* justify-content: flex-start; */
+
+}
+a {
+  text-decoration: none;
+  padding: 10px 15px;
+  /* color: white; */
+  color: black;
+  font-weight: 600;
+}
+
+.links li{
+  
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.empty {
+  width: 100%;
+  height: 86px;
+}
+
+.nav_link:hover {
+
+  /* color: rgba(130, 19, 150, 0.666); */
+  color: white;
+  background-color: #1fc29f;
+  transition: .2s ease-in-out;
+  border-radius: 10px;
+  height: 50px;
+
+}
+
+.nav_link {
+position: relative;
+/* background-color: rgb(177, 39, 39); */
+}
+.nav_link::after {
+
+content: "";
+height: 4.5px;
+width: 0%;
+border-radius: 6px;
+background-color: rgb(0, 183, 255);
+display: inline-block;
+position: absolute;
+left: 20%;
+bottom: -8px;
+opacity: 0;
+transition: ease .5s;
+transition: width .9s ease;
+
+
+
+}
+
+.nav_link:hover::after {
+opacity: 1;
+/* font-size: 22px; */
+
+width: 60%;
+}
+
+
+
+/* Centering Contact Us Section */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Background Image */
+.image {
+  background-image: url('https://wallpapers.com/images/hd/medical-nurse-healthcare-rh7ihpekz6nl3xnj.jpg');
+  height: 80vh;
+}
+
+/* Styling Contact Us Section */
+h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  margin-bottom: 30px;
+}
+
+.contact-button {
+  background-color: #2fd6d2;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+  transition: transform .5s ease-in-out;
+  font-weight: 800;
+  background-color: #fff;
+  color:black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact-button:hover {
+  background-color: #2fd6d2;
+  color: #fff;
+  transform: scale(1.05, 1.05);
+
+
+}
+
+/* Styling Form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 10px; /* Adjusted border-radius */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 28px;
+}
+
+.form-group {
+  flex-basis: calc(48% - 10px);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  margin-bottom: 20px;
+}
+
+#yes_no_ {
+  margin-bottom: 10px;
+}
+
+#yn {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Adjusted border-radius */
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.yes_no {
+display: flex;
+
+}
+
+.yes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+select {
+  width: calc(100% + 2px);
+}
+
+textarea {
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #512da8;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px; /* Adjusted border-radius */
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling Address */
+address {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Additional Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white
+}
+
+.background-image {
+  display: none;
+}
+
+
+.logo img {
+  max-width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  /* color: #fff; */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+
+.contact-info {
+  font-size: 1rem;
+}
+
+
+
+
+/* Additional Styling for Section Titles */
+h2 {
+  color: #444;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  /* color: red; */
+}
+
+/* Additional Styling for Buttons */
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Additional Styling for Links */
+/* a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+} */
+
+/* a:hover {
+  color: #0056b3;
+} */
+
+/* Additional Styling for Input Fields */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+
+
+/* Additional Styling for Footer Links */
+/* footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+} */
+
+/* footer a:hover {
+  color: #007bff;
+} */
+
+/* Additional Styling for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  img {
+    max-width: 100px;
+  }
+
+  /* Additional Styling for Navigation */
+  nav ul {
+    list-style: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+
+  .form-group {
+    flex-basis: 100%;
+  }
+}
+
+.label
+{
+  margin-top: 1.25rem;
+  margin-bottom: 20px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+  /* font-family: 'Roboto', sans-serif; */
+  width: 100%;
+  overflow-x: hidden;
+  
+}
+
+footer {
+  margin-top: 100px;
+  height: 600px;
+  background-color: rgba(186, 233, 242, 0.4);
+  width: 100%;
+}
+
+
+
+.links_foot {
+
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  display: block;
+}
+
+.foot_ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  /* margin-top: 30px; */
+  padding: 60px;
+  /* display: block; */
+}
+
+.overall {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: normal;
+  margin-top: 50px;
+  padding-top: 50px;
+  width: 100%;
+}
+.quick_links h3 {
+  /* text-align: center; */
+  padding-left: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.quick_links {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  
+}
+.links2 {
+  margin-top: 20px;
+}
+
+.quick_links li, p{
+  list-style-type: none;
+  line-height: 35px;
+  font-size: 15px;
+  font-weight: 300;
+  /* font-family: 'Gotham Rounded'; */
+}
+.contact_us {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+.contact_us h3 {
+  padding-left: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.contacts {
+  margin-top: 20px;
+}
+
+.contacts ul{
+  list-style: none;
+}
+
+
+
+
+.foot_in {
+  
+  /* position: relative; */
+  /* bottom: -100px; */
+  margin-top: 60px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 30px 70px 0px 70px;
+  text-align: center;
+
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  margin: auto;
+  margin-top: 60px;
+
+}
+
+.insta, .twitter, .facebook, .linkedin {
+  width: 40px;
+  /* position: relative;
+  top: 140px;
+  left: 530px; */
+  cursor: pointer;    
+  /* filter: blur(10px); */
+  filter: grayscale(1);
+  transform: scale(1.3, 1.3);
+}
+
+.insta:hover, .twitter:hover, .facebook:hover, .linkedin:hover {
+  /* filter: blur(0); */
+  filter: grayscale(0);
+}
+
+li {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 15px;
+  /* color: white; */
+  color: black;
+  font-weight: 600;
+}
+#link_main {
+  color: white;
+      background-color: #1fc29f;
+      transition: .2s ease-in-out;
+      border-radius: 10px;
+      height: 50px;
+}
+
+
+.y {
+  margin-top: 22px;
+}
+
+#country {
+  /* color: red; */
+  width: 50%;
+  /* margin-bottom: 3px; */
+}
+#files{
+  margin-bottom: 35px;
+}
+</style>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <!-- <img src="logo.png" alt="logo" width="100px"> -->
+        
+        <a href="index.html"><img src="img/logo.png"></a>
+      </div>
+      
+      <div class="links">
+        <ul>
+          <li><a class="nav_link" href="../doctor/index.html">Our Doctors</a></li>
+          <li><a class="nav_link" href="../specialities/index.html">Our Specialities</a></li>
+          <li><a class="nav_link"  href="appointment">Book an Appointment</a></li>
+          <li><a class="nav_link" href="../know yourself/index.html">Know yourself</a></li>
+          <li><a class="nav_link" id="link_main" href="../treatment enquiries/index.html">Treatment Enquiries</a></li>
+ 
+        </ul>
+      </div>
+      
+    </nav>
+  </header>
+  
+  <div class="empty"></div>
+
+  <!--Header Endss -->
+  <main>
+  <div class="image"></div>
+  <div class="container">
+    <h1>Contact Us</h1>
+    
+      <p>Fill the form and our team will get back to you within 24 hours</p>
+      <h2>Contact Options</h2>
+      <p>For specific enquiries, please choose the appropriate option below:</p>
+      <div class="contact-buttons">
+        <button type="button" class="contact-button" onclick="toggleForm('doctors')">Medical and Doctor Consultation</button>
+        <button type="button" class="contact-button" onclick="toggleForm('enquiries')">Other Enquiries</button>
+      </div>
+      <form method="post" action="/treatment" id="doctorsForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="">Select Country</option>
+            <option value="IN">India</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="state">State/Province</label>
+          <select id="state" name="state">
+            <option value="">Select State/Province</option>
+            <!-- Indian States -->
+            <option value="AP">Andhra Pradesh</option>
+            <option value="TN">Tamil Nadu</option>
+            <option value="KA">Karnataka</option>
+            <option value="MH">Maharashtra</option>
+            <!-- USA States -->
+            <option value="CA">California</option>
+            <option value="TX">Texas</option>
+            <option value="FL">Florida</option>
+            <!-- UK Countries -->
+            <option value="ENG">England</option>
+            <option value="SCO">Scotland</option>
+            <option value="WAL">Wales</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <select id="city" name="city">
+            <option value="">Select City</option>
+            <!-- Indian Cities -->
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Mumbai">Mumbai</option>
+            <!-- USA Cities -->
+            <option value="NY">New York</option>
+            <option value="DAL">Dallas</option>
+            <option value="CHI">Chicago</option>
+            <!-- UK Cities -->
+            <option value="LON">London</option>
+            <option value="MAN">Manchester</option>
+            <option value="EDN">Edinburgh</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="speciality">Speciality</label>
+          <select id="speciality" name="speciality" required>
+            <option>Cardiologist</option>
+            <option>Gastoenterologist</option>
+            <option>Orthopaedic</option>
+            <option>Dermatology</option>
+            <option>Dermatology</option>
+            <option>Pulmonology</option>
+            <option>Liver Transplant</option>
+            <option>Pain Management</option>
+            <option>Maxillofacial and Dental Surgery</option>
+            <option>ENT Head and Neck Surgery</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="files">Upload Files</label>
+          <input type="file" id="files" name="files" multiple>
+        </div>
+        <div class="form-group" id="yn">
+          <label id="yes_no_" for="visited">Have you visited us in the past?</label>
+          <div class="yes">
+
+            <div class="yes_no">
+              <input type="radio" id="visited_yes" name="visited" value="yes">
+              <label for="visited_yes" class="y">Yes</label>
+            </div>
+            <div class="yes_no">
+              
+              <input type="radio" id="visited_no" name="visited" value="no">
+              <label for="visited_no" class="y">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Feedback</label>
+          <textarea id="message" name="message" rows="10" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" style="margin-left: 45%;">Submit</button>
+      </form>
+    
+      <form id="enquiriesForm" action="/user" method="post" style="display:none;">
+        <div class="form-group">
+          <div class="patient-info">
+            <label for="name" class="label">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email" class="label">Your Email*</label>
+            <input type="email" id="email" name="email" required>
+            <label for="country" class="label">Country</label> 
+            <select id="country" name="country" style="margin-top:5px" style="width:50%" >
+             
+              <option value="">Select Country</option>
+              <option value="IN">India</option>
+              <option value="US">United States</option>
+              <option value="UK">United Kingdom</option>
+            </select>
+          </div>
+          <div class="contact-info">
+            <label for="phone" class="label">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="files" class="label">Upload Files</label>
+            <input type="file" id="files" name="files" multiple>
+          </div>
+          
+        <div class="form-group">
+          <label for="message" class="label">Tell us your requirement</label>
+          <textarea id="message" name="message" rows="10" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+
+  </div>
+      <footer>
+        <div class="foot">
+
+            <!-- <div class="links_foot">
+                <ul class="foot_ul">
+                    <li><a href="">Our Doctors</a></li>
+                    <li><a href="">Our Specialities</a></li>
+                    <li><a href="appointment.html">Book an Appointment</a></li>
+                    <li><a href="">Our Doctors</a></li>
+                    <li><a href="">Treatment Enquiries</a></li>
+                    
+                </ul>
+            </div> -->
+
+            <div class="overall">
+
+                
+                <div class="quick_links">
+                    <h3>Quick Links</h3>
+
+                    <div class="links2">
+                        <ul>
+                        
+                          <li><a href="../doctor/index.html">Our Doctors</a></li>
+                          <li><a href="../specialities/index.html">Our Specialities</a></li>
+                          <li><a  href="../appointment/index.html">Book an Appointment</a></li>
+                          <li><a href="../know yourself/index.html">Know yourself</a></li>
+                          <li><a href="../treatment enquiries/index.html">Treatment Enquiries</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact_us">
+                    <h3>Contact Us</h3>
+
+                    <div class="contacts">
+                        
+                        <ul>
+                            <li><a href="">svasthyahospitals@gmail.com</a></li>
+                            <li><a href="">+91 9999 9999 99</a></li>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+                    
+            </div>
+                
+            <div class="social">
+                <img src="icons/instagram.png" class="insta">
+                <img src="icons/twitter.png" alt="" class="twitter"> 
+                <img src="icons/facebook.png" alt="" class="facebook"> 
+                <img src="icons/linkedin.png" alt="" class="linkedin"> 
+            </div>
+
+            <div class="foot_in">
+                We are a team united in our commitment & driven by an altruistic approach to improve life through outstanding healthcare.
+
+At Svasthya Healthcare, we are committed to improving life through outstanding healthcare. A 400-bed quaternary
+
+care multi-specialty hospital in the heart of your city.
+
+ <br><br><br>
+
+Copyright 2024 - All Reserved by Svasthya Healthcare |
+Privacy Policy
+ | Social Media Policy | 
+BMW Data
+<br>
+Last updated on 21-02-2024.
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+
+    <!-- </div>
+  </main> -->
+  <script>
+    function toggleForm(formType) {
+      if (formType === 'doctors') {
+        var doctorsForm = document.getElementById('doctorsForm');
+        var enquiriesForm = document.getElementById('enquiriesForm');
+        doctorsForm.style.display = 'flex';
+        enquiriesForm.style.display = 'none';
+      } else if (formType === 'enquiries') {
+        var doctorsForm = document.getElementById('doctorsForm');
+        var enquiriesForm = document.getElementById('enquiriesForm');
+        enquiriesForm.style.display = 'block';
+        doctorsForm.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

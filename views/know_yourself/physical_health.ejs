@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Health</title>
+    <link rel="stylesheet" href="public/styles/physical_health.css">
+
+    <style>
+/*Header Starts*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+    /* font-family: 'Roboto', sans-serif; */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(227, 94, 94);
+    background-color: white;
+    /* opacity: ; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0px 40px;
+    border-bottom: 1px solid black;
+    box-shadow: 4px 4px 4px black;
+    z-index: 10;
+
+    /* display: block; */
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-weight: 700;
+    /* border: 1px solid black; */
+    width: 100px;
+}
+
+.logo img {
+    width: 75px;
+    border-radius: 50%;
+    /* transform: scale(1,1); */
+    /* overflow: hidden; */
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul {
+    display: flex;
+    color: white;
+    /* justify-content: flex-start; */
+
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    color: black;
+    font-weight: 600;
+}
+
+.links li {
+
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.empty {
+    width: 100%;
+    height: 86px;
+}
+
+.nav_link:hover {
+
+    /* color: rgba(130, 19, 150, 0.666); */
+    color: white;
+    background-color: #1fc29f;
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    height: 50px;
+
+}
+
+.nav_link {
+    position: relative;
+    /* background-color: rgb(177, 39, 39); */
+}
+
+.nav_link::after {
+
+    content: "";
+    height: 4.5px;
+    width: 0%;
+    border-radius: 6px;
+    background-color: rgb(0, 183, 255);
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    bottom: -8px;
+    opacity: 0;
+    transition: ease .5s;
+    transition: width .9s ease;
+
+
+
+}
+
+.nav_link:hover::after {
+    opacity: 1;
+    /* font-size: 22px; */
+
+    width: 60%;
+}
+/*Header Ends*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to bottom, #f4f0f0, #ff99cc);  */
+}
+
+.header {
+    background-color: pink;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    color: white;
+}
+
+.content {
+    padding: 20px;
+    background: linear-gradient(to bottom, #d1cbcb00, #87ceeb); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2, .container h3 {
+    color: #333;
+    margin-top: 60px;
+}
+
+.container p {
+    color: #161515;
+    padding-left: 70px;
+    padding-right: 50px;
+    line-height: 35px;
+}
+
+.container ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.container ul li {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 35px;
+}
+
+.container ul li:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* .footer {
+    background-color: powderblue;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    margin: auto;
+    margin-left: 36%;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+    /* font-family: 'Roboto', sans-serif; */
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+footer {
+    margin-top: 100px;
+    height: 600px;
+    background-color: rgba(186, 233, 242, 0.4);
+}
+
+
+
+.links_foot {
+
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    display: block;
+}
+
+.foot_ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    /* margin-top: 30px; */
+    padding: 60px;
+    /* display: block; */
+}
+
+.overall {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: normal;
+    margin-top: 50px;
+    padding-top: 50px;
+    width: 100%;
+}
+.quick_links h3 {
+    /* text-align: center; */
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.quick_links {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    
+}
+.links2 {
+    margin-top: 20px;
+}
+
+.quick_links li, p{
+    list-style-type: none;
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: 300;
+    /* font-family: 'Gotham Rounded'; */
+}
+.contact_us {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.contact_us h3 {
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.contacts {
+    margin-top: 20px;
+}
+
+.contacts ul{
+    list-style: none;
+}
+
+
+
+
+.foot_in {
+    
+    /* position: relative; */
+    /* bottom: -100px; */
+    margin-top: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 30px 70px 0px 70px;
+    text-align: center;
+
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+    margin-top: 60px;
+
+}
+
+.insta, .twitter, .facebook, .linkedin {
+    width: 40px;
+    /* position: relative;
+    top: 140px;
+    left: 530px; */
+    cursor: pointer;    
+    /* filter: blur(10px); */
+    filter: grayscale(1);
+    transform: scale(1.3, 1.3);
+}
+
+.insta:hover, .twitter:hover, .facebook:hover, .linkedin:hover {
+    /* filter: blur(0); */
+    filter: grayscale(0);
+}
+
+li {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    color: black;
+    font-weight: 600;
+}
+#link_main {
+    color: white;
+    background-color: #1fc29f;
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    height: 50px;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!--Header Starts-->
+    <!--Header-->
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="logo.png" alt="logo" width="100px"> -->
+
+                <a href="index.html"><img src="NewSvasthya.png"></a>
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a class="nav_link" href="../doctor/index.html">Our Doctors</a></li>
+                    <li><a class="nav_link" href="../specialities/index.html">Our Specialities</a></li>
+                    <li><a class="nav_link" href="../appointment/index.html">Book an Appointment</a></li>
+                    <li><a class="nav_link" id="link_main" href="../know yourself/index.html">Know yourself</a></li>
+                    <li><a class="nav_link" href="../treatment enquiries/index.html">Treatment Enquiries</a></li>
+                    <!-- <li><a href="">Treatment Enquiries</a></li> -->
+                    <!-- <li class="menus"> <i class="fa-solid fa-bars"></i> </li> -->
+
+
+
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="empty"></div>
+
+    <!--Header Endss-->
+    <!--Header Endss-->
+    <header class="header">
+        <h1>Physical Health</h1>
+    </header>
+    <main class="content">
+        <div class="container">
+            <h2>Defining Physical Health</h2>
+            <p>Physical health is the foundation upon which our overall well-being rests. It encompasses the intricate
+                interplay of various bodily systems, organs, and tissues. When we speak of physical health, we're
+                referring to more than just the absence of illness; it's about achieving an optimal state of
+                functioning. Imagine your body as a finely tuned machine—each part has a role, and when they work
+                harmoniously, you experience vitality. From the rhythmic beating of your heart to the efficient
+                digestion of nutrients, physical health ensures that your body operates smoothly. It's the ability to
+                wake up in the morning, stretch, and feel ready to take on the day.</p>
+
+            <h2>Examples of Physical Health</h2>
+            <ul>
+                <li>Cardiovascular Fitness: Picture yourself jogging along a scenic trail. Your heart pumps oxygen-rich
+                    blood to your muscles, and your lungs expand to accommodate the increased demand. Regular aerobic
+                    exercises—whether it's brisk walking, swimming, or cycling—enhance heart health, improve blood
+                    circulation, and reduce the risk of cardiovascular diseases. A strong heart means a longer, more
+                    active life.</li>
+                <li>Muscular Strength and Flexibility: Imagine lifting a heavy grocery bag effortlessly. Muscular
+                    strength, developed through weightlifting, resistance training, or bodyweight exercises, allows you
+                    to perform daily tasks without strain. Additionally, flexibility—achieved through activities like
+                    yoga or stretching—keeps your joints supple and prevents stiffness. It's the ability to touch your
+                    toes or twist gracefully during a dance class.</li>
+                <li>Nutrition: Consider a colorful plate filled with fresh fruits, vegetables, whole grains, and lean
+                    proteins. Proper nutrition fuels your body, providing essential vitamins, minerals, and energy.
+                    Calcium strengthens your bones, iron supports healthy blood, and antioxidants protect your cells. A
+                    balanced diet not only prevents deficiencies but also supports overall physical health.</li>
+                <li>Quality Sleep: Imagine waking up after a restful night's sleep. Adequate sleep is vital for physical
+                    and mental recovery. During those hours of slumber, your body repairs tissues, consolidates
+                    memories, and balances hormones. Poor sleep affects immune function, metabolism, and cognitive
+                    abilities. Prioritize sleep—it's your body's reset button.</li>
+                <li>Hydration: Visualize sipping water throughout the day. Staying hydrated ensures proper organ
+                    function, aids digestion, and maintains skin health. Water transports nutrients, regulates body
+                    temperature, and flushes out toxins. When you're well-hydrated, your body hums with vitality.</li>
+                <li>Avoiding Harmful Substances: Imagine saying no to that cigarette or limiting alcohol intake. By
+                    avoiding harmful substances, you protect your liver, lungs, and overall health. Smoking damages lung
+                    tissue, while excessive alcohol strains your liver. Choose wellness over momentary indulgence.</li>
+            </ul>
+
+
+            <div class="center">
+                <img src="C:\Users\anand\OneDrive\Desktop\fsd2\physical_health(1)(1).jpeg" alt="Physical Health Image">
+            </div>
+
+            <p>Remember, physical health isn't a static state—it's a dynamic journey. Listen to your body, make
+                conscious choices, and celebrate the marvel that is your physical vessel.</p>
+
+
+            <div class="video-container center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/37UhELFvPec?si=WiLDVTcj46EVIRkr"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <!--Footer Starts-->
+    <footer>
+        <div class="foot">
+
+            <!-- <div class="links_foot">
+            <ul class="foot_ul">
+                <li><a href="">Our Doctors</a></li>
+                <li><a href="">Our Specialities</a></li>
+                <li><a href="appointment.html">Book an Appointment</a></li>
+                <li><a href="">Our Doctors</a></li>
+                <li><a href="">Treatment Enquiries</a></li>
+                
+            </ul>
+        </div> -->
+
+            <div class="overall">
+
+
+                <div class="quick_links">
+                    <h3>Quick Links</h3>
+
+                    <div class="links2">
+                        <ul>
+
+                            <li><a href="../doctor/index.html">Our Doctors</a></li>
+                            <li><a href="../specialities/index.html">Our Specialities</a></li>
+                            <li><a href="../appointment/index.html">Book an Appointment</a></li>
+                            <li><a href="../know yourself/index.html">Know yourself</a></li>
+                            <li><a href="../treatment enquiries/index.html">Treatment Enquiries</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact_us">
+                    <h3>Contact Us</h3>
+
+                    <div class="contacts">
+
+                        <ul>
+                            <li><a href="">svasthyahospitals@gmail.com</a></li>
+                            <li><a href="">+91 9999 9999 99</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="social">
+                <img src="instagram.png" class="insta">
+                <img src="twitter.png" alt="" class="twitter">
+                <img src="facebook.png" alt="" class="facebook">
+                <img src="linkedin.png" alt="" class="linkedin">
+            </div>
+
+            <div class="foot_in">
+                We are a team united in our commitment & driven by an altruistic approach to improve life through
+                outstanding healthcare.
+
+                At Svasthya Healthcare, we are committed to improving life through outstanding healthcare. A 400-bed
+                quaternary
+
+                care multi-specialty hospital in the heart of your city.
+
+                <br><br><br>
+
+                Copyright 2024 - All Reserved by Svasthya Healthcare |
+                Privacy Policy
+                | Social Media Policy |
+                BMW Data
+                <br>
+                Last updated on 21-02-2024.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

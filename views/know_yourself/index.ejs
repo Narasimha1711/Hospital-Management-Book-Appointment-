@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Yourself</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+    /* font-family: 'Roboto', sans-serif; */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(227, 94, 94);
+    background-color: white;
+    /* opacity: ; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0px 40px;
+    border-bottom: 1px solid black;
+    box-shadow: 4px 4px 4px black;
+    z-index: 10;
+
+    /* display: block; */
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-weight: 700;
+    /* border: 1px solid black; */
+    width: 100px;
+}
+
+.logo img {
+    width: 75px;
+    border-radius: 50%;
+    /* transform: scale(1,1); */
+    /* overflow: hidden; */
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul {
+    display: flex;
+    color: white;
+    /* justify-content: flex-start; */
+
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    color: black;
+    font-weight: 600;
+}
+
+.links li {
+
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.empty {
+    width: 100%;
+    height: 86px;
+}
+
+.nav_link:hover {
+
+    /* color: rgba(130, 19, 150, 0.666); */
+    color: white;
+    background-color: #1fc29f;
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    height: 50px;
+
+}
+
+.nav_link {
+    position: relative;
+    /* background-color: rgb(177, 39, 39); */
+}
+
+.nav_link::after {
+
+    content: "";
+    height: 4.5px;
+    width: 0%;
+    border-radius: 6px;
+    background-color: rgb(0, 183, 255);
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    bottom: -8px;
+    opacity: 0;
+    transition: ease .5s;
+    transition: width .9s ease;
+
+
+
+}
+
+.nav_link:hover::after {
+    opacity: 1;
+    /* font-size: 22px; */
+
+    width: 60%;
+}
+/*Header Ends*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: powderblue;
+    margin: 0;
+    padding: 0;
+}
+
+/* nav {
+    background-color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    background-color: #D3D3D3;
+} */
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.flex-box {
+    width: 30%;
+    background-color: powderblue;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.flex-box:hover {
+    background-color: green;
+    color: white;
+}
+
+.flex-box h2 {
+    font-weight: bold;
+}
+
+.flex-box p {
+    font-style: italic;
+}
+
+/*  */
+.info-container {
+    background-color: white;
+    padding: 50px;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+
+.new-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.new-div a {
+    display: inline-block;
+    background-color: powderblue;
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.new-div a:hover {
+    background-color: green;
+    color: white;
+}
+/*  */
+/*Footer */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+    /* font-family: 'Roboto', sans-serif; */
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+footer {
+    margin-top: 100px;
+    height: 600px;
+    background-color: rgba(186, 233, 242, 0.4);
+}
+
+
+
+.links_foot {
+
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    display: block;
+}
+
+.foot_ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    /* margin-top: 30px; */
+    padding: 60px;
+    /* display: block; */
+}
+
+.overall {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: normal;
+    margin-top: 50px;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.quick_links h3 {
+    /* text-align: center; */
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.quick_links {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+
+}
+
+.links2 {
+    margin-top: 20px;
+}
+
+.quick_links li,
+p {
+    list-style-type: none;
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: 300;
+    /* font-family: 'Gotham Rounded'; */
+}
+
+.contact_us {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.contact_us h3 {
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.contacts {
+    margin-top: 20px;
+}
+
+.contacts ul {
+    list-style: none;
+}
+.foot_in {
+
+    /* position: relative; */
+    /* bottom: -100px; */
+    margin-top: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 30px 70px 0px 70px;
+    text-align: center;
+
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+    margin-top: 60px;
+
+}
+
+.insta,
+.twitter,
+.facebook,
+.linkedin {
+    width: 40px;
+    /* position: relative;
+    top: 140px;
+    left: 530px; */
+    cursor: pointer;
+    /* filter: blur(10px); */
+    filter: grayscale(1);
+    transform: scale(1.3, 1.3);
+}
+
+.insta:hover,
+.twitter:hover,
+.facebook:hover,
+.linkedin:hover {
+    /* filter: blur(0); */
+    filter: grayscale(0);
+}
+
+li {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    color: black;
+    font-weight: 600;
+}
+
+#link_main {
+    color: white;
+    background-color: #1fc29f;
+    transition: .2s ease-in-out;
+    border-radius: 10px;
+    height: 50px;
+}
+    </style>
+    
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="logo.png" alt="logo" width="100px"> -->
+
+                <a href="index.html"><img src="NewSvasthya.png"></a>
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a class="nav_link" href="../doctor/index.html">Our Doctors</a></li>
+                    <li><a class="nav_link" href="../specialities/index.html">Our Specialities</a></li>
+                    <li><a class="nav_link" href="../appointment/index.html">Book an Appointment</a></li>
+                    <li><a class="nav_link" id="link_main" href="./index.html">Know yourself</a></li>
+                    <li><a class="nav_link" href="../treatment enquiries/index.html">Treatment Enquiries</a></li>
+                    <!-- <li><a href="">Treatment Enquiries</a></li> -->
+                    <!-- <li class="menus"> <i class="fa-solid fa-bars"></i> </li> -->
+
+
+
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="empty"></div>
+
+    <!--Header Endss-->
+    <div class="flex-container">
+        <a href="/mentalhealth" class="flex-box" id="mentalHealth">
+            <h2>Mental Health</h2>
+            <p>Mental health is a state of mental well-being that enables people to cope with the stresses of life...
+            </p>
+        </a>
+        <a href="/physicalhealth" class="flex-box" id="physicalHealth">
+            <h2>Physical Health</h2>
+            <p>Physical health is a vital aspect of overall well-being. It refers to the condition of a person’s body...
+            </p>
+        </a>
+        <a href="/personalhygiene" class="flex-box" id="personalHygiene">
+            <h2>Personal Hygiene</h2>
+            <p>Personal hygiene is the practice of maintaining cleanliness to prevent disease and promote good health...
+            </p>
+        </a>
+        <a href="/tests" class="flex-box" id="teststypes">
+            <h2>Tests</h2>
+            <p>Take the test to know about yourself and continue living good health...</p>
+        </a>
+    </div>
+
+    <div class="info-container">
+        <h2>What is the Know Yourself section?</h2>
+        <p>The Know Yourself section of this website serves as a comprehensive resource hub, dedicated to empowering
+            users to take proactive steps towards optimizing their health and well-being. This section is meticulously
+            designed to provide a wealth of information and resources tailored to help individuals gain a deeper
+            understanding of their own health status, preferences, and behaviors.</p>
+
+        <ul>
+            <li>
+                <h3>1) Health Assessments and Surveys:</h3>
+                <p>Users are encouraged to engage in interactive health assessments and surveys meticulously crafted to
+                    gauge various aspects of their health. These assessments may cover a wide range of topics, including
+                    lifestyle habits, dietary choices, exercise routines, sleep patterns, stress levels, and mental
+                    well-being. Through insightful questions and prompts, users gain valuable insights into their
+                    current health status and potential areas for improvement.</p>
+            </li>
+            <li>
+                <h3>2) Educational Resources and Insights:</h3>
+                <p>The "Know Yourself" section features an extensive repository of educational resources, including
+                    articles, guides, infographics, and videos. These resources cover a diverse range of health topics,
+                    from basic anatomy and physiology to advanced disease prevention strategies. Users are empowered to
+                    deepen their understanding of various health-related concepts, enabling them to make informed
+                    decisions regarding their well-being.</p>
+            </li>
+        </ul>
+
+        <p>In essence, the "Know Yourself" section serves as a dynamic gateway to self-discovery and empowerment,
+            equipping users with the knowledge, tools, and support they need to take charge of their health and
+            well-being. By fostering a culture of self-awareness, education, and collaboration, this section embodies
+            the ethos of proactive health management in the digital age.</p>
+    </div>
+
+    <!--Footer Starts-->
+    <footer>
+        <div class="foot">
+
+            <!-- <div class="links_foot">
+                <ul class="foot_ul">
+                    <li><a href="">Our Doctors</a></li>
+                    <li><a href="">Our Specialities</a></li>
+                    <li><a href="appointment.html">Book an Appointment</a></li>
+                    <li><a href="">Our Doctors</a></li>
+                    <li><a href="">Treatment Enquiries</a></li>
+                    
+                </ul>
+            </div> -->
+
+            <div class="overall">
+
+
+                <div class="quick_links">
+                    <h3>Quick Links</h3>
+
+                    <div class="links2">
+                        <ul>
+
+                            <li><a href="../doctor/index.html">Our Doctors</a></li>
+                            <li><a href="../specialities/index.html">Our Specialities</a></li>
+                            <li><a href="/appointment">Book an Appointment</a></li>
+                            <li><a href="./index.html">Know yourself</a></li>
+                            <li><a href="../treatment enquiries/index.html">Treatment Enquiries</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact_us">
+                    <h3>Contact Us</h3>
+
+                    <div class="contacts">
+
+                        <ul>
+                            <li><a href="">svasthyahospitals@gmail.com</a></li>
+                            <li><a href="">+91 9999 9999 99</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="social">
+                <img src="icons/instagram.png" class="insta">
+                <img src="icons/twitter.png" alt="" class="twitter">
+                <img src="icons/facebook.png" alt="" class="facebook">
+                <img src="icons/linkedin.png" alt="" class="linkedin">
+            </div>
+
+            <div class="foot_in">
+                We are a team united in our commitment & driven by an altruistic approach to improve life through
+                outstanding healthcare.
+
+                At Svasthya Healthcare, we are committed to improving life through outstanding healthcare. A 400-bed
+                quaternary
+
+                care multi-specialty hospital in the heart of your city.
+
+                <br><br><br>
+
+                Copyright 2024 - All Reserved by Svasthya Healthcare |
+                Privacy Policy
+                | Social Media Policy |
+                BMW Data
+                <br>
+                Last updated on 21-02-2024.
+            </div>
+        </div>
+    </footer>
+
+    <!--Footer Endss-->
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+    /* font-family: 'Roboto', sans-serif; */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(227, 94, 94);
+    background-color: white;
+    /* opacity: ; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0px 40px;
+    border-bottom: 1px solid black;
+    box-shadow: 4px 4px 4px black;
+    z-index: 10;
+    
+    /* display: block; */
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-weight: 700;
+    /* border: 1px solid black; */
+    width: 100px;
+}
+
+.logo img {
+    width: 75px;
+    transform: scale(.99,0.99);
+    /* overflow: hidden; */
+    /* border-radius: 50%; */
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul{
+    display: flex;
+    color:white;
+    /* justify-content: flex-start; */
+
+}
+.links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    /* color: white; */
+    color: black;
+    font-weight: 600;
+}
+
+.links li{
+    
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.empty {
+    width: 100%;
+    height: 86px;
+}
+
+/* content css */
+
+.more_in {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+
+}
+
+.emer {
+
+    width: 400px;
+    height: 170px;
+    /* background-color: rgb(60, 133, 151); */
+    /* background-color: #23376E; */
+    /* border: 1px solid black; */
+    /* opacity: ; */
+    border-radius: 10px;
+    text-align: center;
+    /* padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 8px; */
+    padding: 30px;
+    font-size: 19px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform .5s ease-out;
+    flex-direction: column;
+
+}
+
+.feed {
+    width: 400px;
+    height: 170px;
+    /* background-color: rgb(60, 133, 151); */
+    /* background-color: #23376E; */
+    /* border: 1px solid black; */
+    /* opacity: ; */
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 80px;
+    /* padding-left: 50px; */
+    padding-right: 8px;
+    /* padding: 30px; */
+    font-size: 19px;
+    line-height: 35px;
+    align-items: center;
+    color: black;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform .5s ease-out;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.feed p {
+    padding-left: 50px;
+    font-size: 19px;
+    position: relative;
+    bottom: 65%;
+    font-weight: 700;
+}
+
+.emer:hover, .feed:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#pcount {
+    margin-top: 30px;
+}
+
+.dcount {
+
+    margin-top: -25px;
+
+    /* color: red; */
+}
+
+ /* side menu starts*/
+ /* side menu starts*/
+ /* side menu starts*/
+
+ a {
+    text-decoration: none;
+  }
+
+
+
+  .user {
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    transform: scale(2.5,2.5);
+    color: black;
+    color: #1fc29f;
+    /* color: #1fc29f; */
+    position: relative;
+    bottom: 10px;
+    padding-right: 20px;
+    padding-left: 15px;
+    list-style: none;
+    
+}
+
+.user.fa-user {
+    color: #1fc29f;
+}
+
+#side {
+    width: 250px;
+    height: 800px;
+    position: fixed;
+    display: none;
+    /* background-color: black; */
+    z-index: 1000;
+    left: 81.90vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* filter: blur(10px); */
+    background: transparent;
+    opacity: 1;
+    background-color: #1fc29f;
+    transform: all .6s ease-in-out;
+    /* animation-name: moon 1.6s; */
+    /* position: relative; */
+}
+
+.user.user_prof {
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    transform: scale(2.5,2.5);
+    color: black;
+
+    /* color: #1fc29f; */
+    /* color: #1fc29f; */
+
+    /* position: relative; */
+    list-style: none;
+    
+}
+
+.appoint {
+    /* position: absolute; */
+    /* left: 50px; */
+    /* top: 50px; */
+    width: 100%;
+    height: 100px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.appointments_list {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+span {
+    font-weight: 700;
+}

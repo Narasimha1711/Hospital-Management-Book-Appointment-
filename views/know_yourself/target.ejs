@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Heart Rate Calculator</title>
+    <link rel="stylesheet" type="text/css" href="public/styles/target.css">
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, white, rgb(229, 55, 29)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    background-color: rgb(229, 55, 29); 
+    color: white; 
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+form {
+    background-color: white; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"], 
+select {
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(210, 200, 200); 
+    color: rgb(11, 10, 10); 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 800;
+}
+
+button:hover {
+    background-color: #97e79f; 
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid rgb(229,55,29); 
+    border-radius: 4px;
+    background-color: rgb(229, 55, 29); 
+    color: white; 
+}
+
+    </style>
+</head>
+<body>
+    <h1>Target Heart Rate Calculator</h1>
+    <form id="targetHeartRateForm">
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="restingHeartRate">Resting Heart Rate (bpm):</label>
+        <input type="number" id="restingHeartRate" name="restingHeartRate" required><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" class="result-container"></div>
+
+    <script>
+        // JavaScript code here
+        document.getElementById('targetHeartRateForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            const age = parseFloat(document.getElementById('age').value);
+            const restingHeartRate = parseFloat(document.getElementById('restingHeartRate').value);
+
+            function calculateTargetHeartRate(age, restingHeartRate) {
+                const maxHeartRate = 220 - age;
+                const lowerBound = 0.5 * maxHeartRate;
+                const upperBound = 0.85 * maxHeartRate;
+
+                const lowerBoundTarget = lowerBound + restingHeartRate;
+                const upperBoundTarget = upperBound + restingHeartRate;
+
+                return { lowerBoundTarget, upperBoundTarget };
+            }
+
+            const targetHeartRate = calculateTargetHeartRate(age, restingHeartRate);
+
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `<p>Target Heart Rate Zone: ${targetHeartRate.lowerBoundTarget.toFixed(2)} - ${targetHeartRate.upperBoundTarget.toFixed(2)} bpm</p>`;
+            resultContainer.style.display = 'block'; 
+        });
+    </script>
+</body>
+</html>

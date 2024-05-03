@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+    /* font-family: 'Roboto', sans-serif; */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(227, 94, 94);
+    background-color: white;
+    /* opacity: ; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0px 40px;
+    border-bottom: 1px solid black;
+    box-shadow: 4px 4px 4px black;
+    z-index: 10;
+    
+    /* display: block; */
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-weight: 700;
+    /* border: 1px solid black; */
+    width: 100px;
+}
+
+.logo img {
+    width: 75px;
+    transform: scale(.99,0.99);
+    /* overflow: hidden; */
+    /* border-radius: 50%; */
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul{
+    display: flex;
+    color:white;
+    /* justify-content: flex-start; */
+
+}
+.links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    /* color: white; */
+    color: black;
+    font-weight: 600;
+}
+
+.links li{
+    
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.empty {
+    width: 100%;
+    height: 86px;
+}
+
+#img img {
+    max-width: 100%;
+    width: 100%;
+    height: 600px;
+  
+}
+
+/* /////// */
+
+#side {
+    width: 250px;
+    height: 800px;
+    position: fixed;
+    display: none;
+    /* background-color: black; */
+    z-index: 1000;
+    left: 81.90vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* filter: blur(10px); */
+    background: transparent;
+    opacity: 1;
+    background-color: #1fc29f;
+    transform: all .6s ease-in-out;
+    /* animation-name: moon 1.6s; */
+    /* position: relative; */
+}
+
+/* :not(#side.op) {
+    opacity: .8;
+    filter: brightness(0.8);
+} */
+
+
+/* @keyframes moon {
+
+    0%, 49.99% {
+        width: 150px;
+        background-color: red;
+        z-index: 0;
+    }
+
+    50%, 100% {
+        width: 250px;
+        z-index: 1000;
+    }
+    
+} */
+
+.user.user_prof {
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    transform: scale(2.5,2.5);
+    color: black;
+
+    /* color: #1fc29f; */
+    /* color: #1fc29f; */
+
+    /* position: relative; */
+    list-style: none;
+    
+}
+
+.appoint {
+    /* position: absolute; */
+    /* left: 50px; */
+    /* top: 50px; */
+    width: 100%;
+    height: 100px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.appointments_list {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+span {
+    font-weight: 700;
+}
+
+
+
+.head {
+    margin-left: 80px;
+    margin-top: 70px;
+}
+
+#head {
+    margin-top: 30px;
+    text-align: center;
+}
+.show_list {
+    width: 90vw;
+    /* background-color: rgb(163, 66, 66); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* height: 40vh; */
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    
+    /* justify-content: stretch; */
+    
+}
+
+.row_heading {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    /* align-items: center; */
+    margin-bottom: 30px;
+}
+
+
+
+.appoint_id, .appoint_patient_name, .appoint_date, .appoint_timings {
+
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sno {
+    height: 100%;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.list_t {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+footer {
+    margin-top: 100px;
+    height: 600px;
+    background-color: rgba(186, 233, 242, 0.4);
+    /* background-color: red; */
+}
+
+
+
+.links_foot {
+
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    display: block;
+}
+
+.foot_ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    /* margin-top: 30px; */
+    padding: 60px;
+    /* display: block; */
+}
+
+.overall {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: normal;
+    margin-top: 50px;
+    padding-top: 50px;
+    width: 100%;
+}
+.quick_links h3 {
+    /* text-align: center; */
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.quick_links {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    
+}
+.links2 {
+    margin-top: 20px;
+}
+
+.quick_links li, p{
+    list-style-type: none;
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: 300;
+    /* font-family: 'Gotham Rounded'; */
+}
+.contact_us {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.contact_us h3 {
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.contacts {
+    margin-top: 20px;
+}
+
+.contacts ul{
+    list-style: none;
+}
+
+
+
+
+.foot_in {
+    
+    /* position: relative; */
+    /* bottom: -100px; */
+    margin-top: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 30px 70px 0px 70px;
+    text-align: center;
+
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+    margin-top: 60px;
+
+}
+
+.quick_links a, .contact_us a {
+    text-decoration: none;
+    padding: 10px 15px;
+    /* color: white; */
+    color: black;
+    font-weight: 600;
+}
+
+.insta, .twitter, .facebook, .linkedin {
+    width: 40px;
+    /* position: relative;
+    top: 140px;
+    left: 530px; */
+    cursor: pointer;    
+    /* filter: blur(10px); */
+    filter: grayscale(1);
+    transform: scale(1.3, 1.3);
+}
+
+.insta:hover, .twitter:hover, .facebook:hover, .linkedin:hover {
+    /* filter: blur(0); */
+    filter: grayscale(0);
+}
+
+  .nav_link:hover {
+
+        /* color: rgba(130, 19, 150, 0.666); */
+        color: white;
+        background-color: #1fc29f;
+        transition: .2s ease-in-out;
+        border-radius: 10px;
+        height: 50px;
+
+  }
+
+  .nav_link {
+    position: relative;
+    /* background-color: rgb(177, 39, 39); */
+}
+.nav_link::after {
+    
+    content: "";
+    height: 4.5px;
+    width: 0%;
+    border-radius: 6px;
+    background-color: rgb(0, 183, 255);
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    bottom: -8px;
+    opacity: 0;
+    transition: ease .5s;
+    transition: width .9s ease;
+    
+}
+    
+    
+
+.nav_link:hover::after {
+    opacity: 1;
+    /* font-size: 22px; */
+
+    width: 60%;
+  }
+
+ hr {
+    margin-bottom: 40px;
+ }
+
+ /* side menu starts*/
+
+  a {
+    text-decoration: none;
+  }
+
+
+
+  .user {
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    transform: scale(2.5,2.5);
+    color: black;
+    color: #1fc29f;
+    /* color: #1fc29f; */
+    position: relative;
+    bottom: 4px;
+    padding-right: 20px;
+    padding-left: 15px;
+    list-style: none;
+    
+}
+
+.user.fa-user {
+    color: #1fc29f;
+}
+
+#side {
+    width: 250px;
+    height: 800px;
+    position: fixed;
+    display: none;
+    /* background-color: black; */
+    z-index: 1000;
+    left: 81.90vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* filter: blur(10px); */
+    background: transparent;
+    opacity: 1;
+    background-color: #1fc29f;
+    transform: all .6s ease-in-out;
+    /* animation-name: moon 1.6s; */
+    /* position: relative; */
+}
+
+
+.user.user_prof {
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    transform: scale(2.5,2.5);
+    color: black;
+
+    /* color: #1fc29f; */
+    /* color: #1fc29f; */
+
+    /* position: relative; */
+    list-style: none;
+    
+}
+
+.appoint {
+    /* position: absolute; */
+    /* left: 50px; */
+    /* top: 50px; */
+    width: 100%;
+    height: 100px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.appointments_list {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+span {
+    font-weight: 700;
+}
+
+/* present content nav elevate  */
+
+#link_main {
+    color: white;
+        background-color: #1fc29f;
+        transition: .2s ease-in-out;
+        border-radius: 10px;
+        height: 50px;
+}

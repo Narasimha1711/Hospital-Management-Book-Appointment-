@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/super_user/zzz.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<style>
+    .email {
+    margin-left: 100px;
+    width: 300px;
+}
+
+.username {
+    margin-left: 100px;
+    width: 250px
+}
+
+.ind {
+    /* background-color: red; */
+    /* text-align: center; */
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    transition: all 0.5s ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+
+    /* font-family: 'Roboto', sans-serif; */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(227, 94, 94);
+    background-color: white;
+    /* opacity: ; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0px 40px;
+    border-bottom: 1px solid black;
+    box-shadow: 4px 4px 4px black;
+    z-index: 10;
+    
+    /* display: block; */
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    font-weight: 700;
+    /* border: 1px solid black; */
+    width: 100px;
+}
+
+.logo img {
+    width: 75px;
+    transform: scale(.99,0.99);
+    /* overflow: hidden; */
+    /* border-radius: 50%; */
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul{
+    display: flex;
+    color:white;
+    /* justify-content: flex-start; */
+
+}
+.links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    /* color: white; */
+    color: black;
+    font-weight: 600;
+}
+
+.links li{
+    
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.empty {
+    width: 100%;
+    height: 86px;
+}
+
+/* content css */
+/* content css */
+/* content css */
+
+
+.content {
+    width: 80%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+.ind {
+    /* background-color: red; */
+    /* text-align: center; */
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
+    transition: all 0.5s ease-out;
+}
+
+.ind:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.heading {
+    margin-left: 50px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.ded {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.add_user {
+    display: flex;
+    align-items: center;
+}
+
+.add_user button {
+    border: none;
+    font-size: 18px;
+    width: 150px;
+    border-radius: 10px;
+    height: 40px;
+    font-weight: 700;
+}
+
+h3.head  {
+    display: inline;
+}
+
+.username {
+    margin-left: 150px;
+    width: 300px
+}
+
+.email {
+    margin-left: 280px;
+}
+
+
+
+.actions {
+    display: flex;
+    width: 100px;
+    justify-content: space-evenly;
+}
+
+.actions i {
+    cursor: pointer;
+}
+
+.actions .fa-trash:hover {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.actions .fa-pen-to-square:hover {
+    color: orange;
+}
+
+.msg {
+    color: red;
+    font-weight: 500;
+}
+
+.msg1 {
+    color: green;
+    font-weight: 500;
+}
+
+
+
+ /* side menu starts*/
+ /* side menu starts*/
+ /* side menu starts*/
+
+ a {
+    text-decoration: none;
+  }
+
+
+
+  .user {
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    transform: scale(2.5,2.5);
+    color: black;
+    color: #1fc29f;
+    /* color: #1fc29f; */
+    position: relative;
+    bottom: 10px;
+    padding-right: 20px;
+    padding-left: 15px;
+    list-style: none;
+    
+}
+
+.user.fa-user {
+    color: #1fc29f;
+}
+
+#side {
+    width: 250px;
+    height: 800px;
+    position: fixed;
+    display: none;
+    /* background-color: black; */
+    z-index: 1000;
+    left: 81.90vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* filter: blur(10px); */
+    background: transparent;
+    opacity: 1;
+    background-color: #1fc29f;
+    transform: all .6s ease-in-out;
+    /* animation-name: moon 1.6s; */
+    /* position: relative; */
+}
+
+.user.user_prof {
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    transform: scale(2.5,2.5);
+    color: black;
+
+    /* color: #1fc29f; */
+    /* color: #1fc29f; */
+
+    /* position: relative; */
+    list-style: none;
+    
+}
+
+.appoint {
+    /* position: absolute; */
+    /* left: 50px; */
+    /* top: 50px; */
+    width: 100%;
+    height: 100px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.appointments_list {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+span {
+    font-weight: 700;
+}
+
+</style>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="logo.png" alt="logo" width="100px"> -->
+                
+                <img src="img/logo.png">
+            </div>
+
+            <div class="links">
+                <ul>
+                    <!-- <li><a class="nav_link">Our Doctors</a></li>
+                    <li><a class="nav_link">Our Specialities</a></li>
+                    <li><a class="nav_link"  href="appointment.html">Book an Appointment</a></li>
+                    <li><a class="nav_link">Know Yourself</a></li>
+                    <li><a class="nav_link">Treatment Enquiries</a></li> -->
+                    <!-- <li><a href="">Treatment Enquiries</a></li> -->
+                    <!-- <li class="menus"> <i class="fa-solid fa-bars"></i> </li> -->
+
+                    <li><a class="nav_link" href="../doctor/index.html">Our Doctors</a></li>
+                    <li><a class="nav_link" href="../specialities/index.html">Our Specialities</a></li>
+                    <li><a class="nav_link"  href="/appointment">Book an Appointment</a></li>
+                    <li><a class="nav_link" href="/know_yourself">Know yourself</a></li>
+                    <li><a class="nav_link" href="/treatment">Treatment Enquiries</a></li>
+                    <li><a href="/pat_upcomingAppoint">Upcoming Appointments</a></li>
+                    <li class="user"><i class="fa-solid fa-user" onclick="display()"></i></li>
+                    
+                   
+                    
+                    
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+
+    <div class="empty"></div>
+
+    <div id="side">
+        <div class="appoint">
+            <li class="user user_prof"><i class="fa-solid fa-user prof"></i></li>
+            <span id="username">
+                <% if(locals.username) { %>
+                    <%= username %>
+                    <% } %>
+            </span>
+        </div>
+
+        <div class="appointments_list">
+            
+            <a href="/pat_upcomingAppoint" class="appointments_list">Upcoming Appointments</a>
+        </div>
+
+        <div class="appointments_list">
+            <a href="/admin_management" class="appointments_list">Dashboard</a>
+        </div>
+
+        <div class="appointments_list logout">
+            <a href="/user_logout" class="appointments_list">Log Out</a>
+        </div>
+
+        
+        </div>
+
+        
+
+        
+
+            <!-- Content starts from here -->
+            <div class="ded">
+
+            <div class="heading">
+                <h1>Doctors</h1>
+            </div>
+                <!-- </div> -->
+            <div class="msg">
+                <% if(locals.msg) { %>
+                
+                <h3><%= msg %></h1>
+                <% } %>
+
+            </div>
+
+            <div class="msg1">
+                <% if(locals.msg1) { %>
+                
+                    <h3><%= msg1 %></h1>
+                    <% } %>
+            </div>
+
+                <div class="add_user">
+                    <button><a href="/doc_signup">Add Doctor</a></button>
+                </div>
+
+
+                </div>
+
+
+            <div class="content">
+                <% for(let i = 0; i < content.length; i++) { %>
+                <div class="ind">
+                    
+                    <div class="username">
+                        <h3 class="head">Name</h3>: <%= content[i].Doctor_Name %>
+                    </div>
+                    <div class="actions">
+                        <!-- <img src="../public/img/delete_FILL0_wght400_GRAD0_opsz24.png"  width="100px" height="100px"> -->
+                        <!-- <i class="fa-solid fa-trash"></i> -->
+                        <form action="/doc_remove" method="POST">
+                        <input type="hidden" name="email" value= <%= content[i].Doctor_Email %>>
+                        <button type="submit"><a href="/super_app"><i class="fa-solid fa-trash"></i></a></button>
+                    </form>
+                        <i class="fa-solid fa-pen-to-square"></i>
+
+                    </div>
+                    <div class="speciality">
+                        <h3 class="head">Speciality</h3>: <%= content[i].Doctor_Speciality %>
+
+                    </div>
+                    <div class="email">
+                        <h3 class="head">Email</h3>: <%= content[i].Doctor_Email %>
+                    </div>
+
+                </div>
+                <% } %>
+
+            </div>
+
+
+            
+
+            <script
+ src="https://kit.fontawesome.com/37728e5045.js" crossorigin="anonymous"></script>
+ <script>
+ 
+
+ var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 3){
+        counter = 1;
+      }
+    }, 3000);
+
+    function display() {
+    const ele = document.getElementById('side');
+    console.log(ele)
+   
+    if(ele.style.display === 'block') {
+        ele.style.display = 'none';
+    }
+    else {
+        ele.style.display = 'block';
+        ele.classList.add('op');
+    }
+    
+}
+
+
+
+ 
+</script>
+    
+</body>
+</html>

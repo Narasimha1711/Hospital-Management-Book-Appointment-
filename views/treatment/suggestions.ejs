@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/super_user/zzz.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<style>
+    .email {
+    margin-left: 50px;
+    width: 300px;
+    height: 100%;
+    /* overflow-y: scroll; */
+}
+
+.username {
+    margin-left: 100px;
+    width: 350px
+}
+
+.ind {
+    /* background-color: red; */
+    /* text-align: center; */
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    transition: all 0.5s ease-out;
+    overflow: auto;
+}
+
+</style>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="logo.png" alt="logo" width="100px"> -->
+                
+                <img src="img/logo.png">
+            </div>
+
+            <div class="links">
+                <ul>
+                    <!-- <li><a class="nav_link">Our Doctors</a></li>
+                    <li><a class="nav_link">Our Specialities</a></li>
+                    <li><a class="nav_link"  href="appointment.html">Book an Appointment</a></li>
+                    <li><a class="nav_link">Know Yourself</a></li>
+                    <li><a class="nav_link">Treatment Enquiries</a></li> -->
+                    <!-- <li><a href="">Treatment Enquiries</a></li> -->
+                    <!-- <li class="menus"> <i class="fa-solid fa-bars"></i> </li> -->
+
+                    <li><a class="nav_link" href="../doctor/index.html">Our Doctors</a></li>
+                    <li><a class="nav_link" href="../specialities/index.html">Our Specialities</a></li>
+                    <li><a class="nav_link"  href="/appointment">Book an Appointment</a></li>
+                    <li><a class="nav_link" href="../know yourself/index.html">Know yourself</a></li>
+                    <li><a class="nav_link" href="../treatment enquiries/index.html">Treatment Enquiries</a></li>
+                    <li><a href="/pat_upcomingAppoint">Upcoming Appointments</a></li>
+                    <li class="user"><i class="fa-solid fa-user" onclick="display()"></i></li>
+                    
+                   
+                    
+                    
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+
+    <div class="empty"></div>
+
+    <div id="side">
+        <div class="appoint">
+            <li class="user user_prof"><i class="fa-solid fa-user prof"></i></li>
+            <span id="username">
+                <% if(locals.username) { %>
+                    <%= username %>
+                    <% } %>
+            </span>
+        </div>
+
+        <div class="appointments_list">
+            
+            <a href="/pat_upcomingAppoint" class="appointments_list">Upcoming Appointments</a>
+        </div>
+
+        <div class="appointments_list">
+            <a href="/admin_management" class="appointments_list"> Dashboard</a>
+        </div>
+
+        <div class="appointments_list logout">
+            <a href="/user_logout" class="appointments_list">Log Out</a>
+        </div>
+
+        
+        </div>
+
+        
+
+        
+
+            <!-- Content starts from here -->
+            <div class="ded">
+
+            <div class="heading">
+                <h1>Suggestions</h1>
+            </div>
+                <!-- </div> -->
+            <div class="msg">
+                <% if(locals.msg) { %>
+                
+                <h3><%= msg %></h1>
+                <% } %>
+            </div>
+                <div class="add_user">
+                    <!-- <button>Add Doctor</button> -->
+                </div>
+
+
+                </div>
+
+
+            <div class="content">
+                <% for(let i = 0; i < content.length; i++) { %>
+                <div class="ind">
+                    
+                    <div class="username">
+                        <h3 class="head">Email</h3>: <%= content[i].email %>
+                    </div>
+                    <!-- <img src="../public/img/delete_FILL0_wght400_GRAD0_opsz24.png"  width="100px" height="100px"> -->
+                    <!-- <i class="fa-solid fa-trash"></i> -->
+                    <!-- <div class="actions">
+                        <form action="/doc_remove" method="POST">
+                        <input type="hidden" name="email" value= <%= content[i].email %>>
+                        <button type="submit"><a href="/super_app"><i class="fa-solid fa-trash"></i></a></button>
+                    </form>
+                        <i class="fa-solid fa-pen-to-square"></i>
+
+                    </div> -->
+                    <div class="speciality">
+                        <h3 class="head">Visited</h3>: <%= content[i].visited %>
+
+                    </div>
+                    <div class="email">
+                        <h3 class="head">Message</h3>: <%= content[i].message %>
+                    </div>
+
+                </div>
+                <% } %>
+
+                <% for(let i = 0; i < content1.length; i++) { %>
+                    <div class="ind">
+                        
+                        <div class="username">
+                            <h3 class="head">Email</h3>: <%= content1[i].email %>
+                        </div>
+                        <!-- <img src="../public/img/delete_FILL0_wght400_GRAD0_opsz24.png"  width="100px" height="100px"> -->
+                        <!-- <i class="fa-solid fa-trash"></i> -->
+                        <!-- <div class="actions">
+                            <form action="/doc_remove" method="POST">
+                            <input type="hidden" name="email" value= <%= content1[i].email %>>
+                            <button type="submit"><a href="/super_app"><i class="fa-solid fa-trash"></i></a></button>
+                        </form>
+                            <i class="fa-solid fa-pen-to-square"></i>
+    
+                        </div> -->
+                        <!-- <div class="speciality">
+                            <h3 class="head">visited</h3>: <%# content1[i].visited %>
+    
+                        </div> -->
+                        <div class="email">
+                            <h3 class="head">message</h3>: <%= content1[i].message %>
+                        </div>
+    
+                    </div>
+                    <% } %>
+
+            </div>
+
+
+            
+
+            <script
+ src="https://kit.fontawesome.com/37728e5045.js" crossorigin="anonymous"></script>
+ <script>
+ 
+
+ var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 3){
+        counter = 1;
+      }
+    }, 3000);
+
+    function display() {
+    const ele = document.getElementById('side');
+    console.log(ele)
+   
+    if(ele.style.display === 'block') {
+        ele.style.display = 'none';
+    }
+    else {
+        ele.style.display = 'block';
+        ele.classList.add('op');
+    }
+    
+}
+
+
+
+ 
+</script>
+    
+</body>
+</html>
