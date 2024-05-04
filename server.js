@@ -16,6 +16,7 @@ const server = require('http').Server(app)
 const io = require('socket.io')(server)
 const { v4: uuidV4 } = require('uuid');
 const { count } = require('console');
+const MongoDBStore = require('connect-mongodb-session')(session);
 // import nodemailer from "nodemailer";
 // const { render } = require('ejs');
 // const insertDoctors = require('./insertdoctors.js');
@@ -50,6 +51,16 @@ connectDb();
 //     });
 // }
 
+const store = new MongoDBStore({
+    uri: process.env.CONNECTION_STRING,
+    collection: 'sessions' // Collection to store sessions
+  });
+  
+  // Catch errors
+  store.on('error', function(error) {
+    console.error(error);
+  });
+
 app.use(express.urlencoded({extended: true}));
 const PORT = process.env.PORT || 9000;
 app.use(express.static('public'));
@@ -58,9 +69,16 @@ app.use(session({
     secret: "This is secret",
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 20 * 60 * 1000 }
+    store: store,
+    cookie: { secure: false,
+        maxAge: 20 * 60 * 1000  }
+
+    // cookie: { maxAge: 20 * 60 * 1000 }
 
 }))
+
+
+ // Change it to true if using HTTPS
 
 
 app.use(express.json());
